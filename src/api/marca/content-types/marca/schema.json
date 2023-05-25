@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "marcas",
+  "info": {
+    "singularName": "marca",
+    "pluralName": "marcas",
+    "displayName": "marca",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "models": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model",
+      "mappedBy": "marca"
+    }
+  }
+}

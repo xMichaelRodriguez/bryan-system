@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "models",
+  "info": {
+    "singularName": "model",
+    "pluralName": "models",
+    "displayName": "model",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "models"
+    },
+    "marca": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::marca.marca",
+      "inversedBy": "models"
+    }
+  }
+}
