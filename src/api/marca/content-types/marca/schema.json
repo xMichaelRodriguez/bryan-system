@@ -30,6 +30,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "marca"
     }
   }
 }

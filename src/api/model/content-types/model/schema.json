@@ -17,16 +17,16 @@
       "required": true,
       "unique": true
     },
-    "product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::product.product",
-      "inversedBy": "models"
-    },
     "marca": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::marca.marca",
+      "inversedBy": "models"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
       "inversedBy": "models"
     }
   }

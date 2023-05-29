@@ -18,9 +18,9 @@
     },
     "models": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::model.model",
-      "mappedBy": "product"
+      "mappedBy": "products"
     },
     "price": {
       "type": "decimal",
@@ -37,6 +37,12 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "marca": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::marca.marca",
+      "inversedBy": "products"
     }
   }
 }
